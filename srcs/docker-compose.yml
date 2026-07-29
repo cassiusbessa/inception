@@ -104,6 +104,26 @@ services:
     networks:
       - inception
 
+  ftp:
+    container_name: ftp
+    build:
+      context: ./requirements/ftp
+      dockerfile: Dockerfile
+    image: ftp:inception
+    restart: always
+    env_file:
+      - .env
+    environment:
+      FTP_USER: ${FTP_USER}
+    secrets:
+      - ftp_password
+    volumes:
+      - wordpress_data:/var/www/html
+    ports:
+      - "21:21"
+      - "21100-21110:21100-21110"
+    networks:
+      - inception
 
   nginx:
     container_name: nginx
@@ -165,3 +185,5 @@ secrets:
     file: ../secrets/db_root_password.txt
   credentials:
     file: ../secrets/credentials.txt
+  ftp_password:
+    file: ../secrets/ftp_password.txt
