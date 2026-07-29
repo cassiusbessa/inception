@@ -81,7 +81,28 @@ services:
       retries: 10
       start_period: 40s
 
+  adminer:
+    container_name: adminer
+    build:
+      context: ./requirements/adminer
+      dockerfile: Dockerfile
+    image: adminer:inception
+    restart: always
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    networks:
+      - inception
 
+  static:
+    container_name: static
+    build:
+      context: ./requirements/static
+      dockerfile: Dockerfile
+    image: static:inception
+    restart: always
+    networks:
+      - inception
 
 
   nginx:
@@ -96,6 +117,10 @@ services:
     depends_on:
       wordpress:
         condition: service_healthy
+      adminer:
+        condition: service_started
+      static:
+        condition: service_started
     env_file:
       - .env
     ports:

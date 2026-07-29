@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>caqueiro — Inception</title>
+	<style>
+		:root { color-scheme: light; --ink: #1a1a1a; --muted: #5c5c5c; --line: #d8d4cc; --bg: #f3efe6; --accent: #0f5c4c; }
+		* { box-sizing: border-box; }
+		body { margin: 0; font-family: "IBM Plex Sans", "Segoe UI", sans-serif; background:
+			radial-gradient(circle at 10% 10%, #fff8e8 0%, transparent 40%),
+			linear-gradient(160deg, var(--bg), #e7ece7 70%);
+			color: var(--ink); min-height: 100vh; }
+		main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.5rem; }
+		h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: -0.03em; margin: 0 0 0.5rem; }
+		p { color: var(--muted); line-height: 1.6; }
+		.meta { display: flex; gap: 1rem; flex-wrap: wrap; margin: 2rem 0; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+		.meta span { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+		a { color: var(--accent); }
+	</style>
+</head>
+<body>
+	<main>
+		<h1>caqueiro</h1>
+		<p>Static showcase page for the 42 Inception bonus — served from its own container, proxied by NGINX over TLS.</p>
+		<div class="meta">
+			<span>Docker</span>
+			<span>Alpine 3.20</span>
+			<span>NGINX + TLS</span>
+		</div>
+		<p>Back to WordPress: <a href="/">caqueiro.42.fr</a></p>
+	</main>
+</body>
+</html>
