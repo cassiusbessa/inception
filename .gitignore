@@ -1,0 +1,22 @@
+# Secrets — keep real values local only (gitignored)
+secrets/*
+!secrets/*.example
+
+# Local env (copy from example)
+srcs/.env
+.env
+
+# Certificates generated at build/runtime
+*.pem
+*.key
+*.crt
+
+# Editor / OS noise
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Docker leftovers
+*.log
