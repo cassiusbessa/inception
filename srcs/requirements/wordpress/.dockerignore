@@ -1,0 +1,6 @@
+*
+!conf/
+!tools/
+!Dockerfile
+!conf/**
+!tools/**
