@@ -73,7 +73,3 @@ Open **https://caqueiro.42.fr** (accept the self-signed certificate). WordPress 
 - [WordPress WP-CLI](https://wp-cli.org/)
 - [MariaDB documentation](https://mariadb.com/kb/en/documentation/)
 - [Alpine Linux packages](https://pkgs.alpinelinux.org/)
-
-### How AI was used
-
-AI assisted with scaffolding the Compose layout, drafting entrypoint scripts, aligning the tree with the subject’s example structure, and writing README / USER_DOC / DEV_DOC. All Dockerfiles, configs, and scripts were reviewed, adapted to Alpine 3.20 packages, and tested locally before submission. Peer review remains required before evaluation.
